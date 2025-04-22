@@ -1,113 +1,96 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Francisco | Portfólio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="./public/icon.png" type="image/x-icon" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-  </head>
 
-  <body>
-    <nav>
-      <div class="nav-left">
-        <a href="https://github.com/jm1fenix" target="_blank">
-          <i class="fab fa-github"></i> GitHub
-        </a>
-        <a
-          href="https://br.linkedin.com/in/francisco-gasperini"
-          target="_blank"
-        >
-          <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
-        <a href="#" id="contate-me-btn">
-          <i class="fas fa-envelope"></i> Contate-me
-        </a>
-      </div>
-      <div class="nav-right">
-        <a href="Tescolar.html" target="_blank">
-          <i class="fas fa-graduation-cap"></i> Portfólio Escolar
-        </a>
-      </div>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Francisco | Portfólio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="./public/icon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
 
-    <section class="sobremim" id="sobremim">
-      <div class="sobre-p">
-        <h2>Olá! Eu sou o Francisco 👋</h2>
-        <p>
-          Sou Técnico em Análise de Desenvolvimento de Sistemas pelo SESI SENAI
-          - Florianópolis e estou cursando Gestão de Tecnologia da Informação no
-          IFSC. Tenho grande interesse por tecnologia, leitura, escrita e
-          música. Estou me dedicando a desenvolver uma base sólida para atuar de
-          maneira completa em gestão e análise de dados.
-        </p>
-      </div>
-      <div>
-        <img
-          class="francis"
-          src="./public/francis1.png"
-          alt="Foto de Francisco"
-        />
-      </div>
-    </section>
-
-    <section style="text-align: center; padding-top: 50px" id="curriculo">
-      <h2>📄 Baixe meu currículo</h2>
-      <a
-        href="./public/curriculo_francisco.pdf"
-        download
-        class="button"
-        style="position: static; margin-top: 20px"
-        >Download</a
-      >
-    </section>
-
-    <div class="modal" id="modal-contato">
-      <div class="modal-content">
-        <span class="close-btn" id="fechar-modal">&times;</span>
-        <h2>Entre em Contato</h2>
-        <form
-          id="form-contato"
-          action="https://formspree.io/f/mldjvbqo"
-          method="POST"
-        >
-          <label for="nome">Nome:</label>
-          <input type="text" id="nome" name="nome" required />
-
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-
-          <label for="mensagem">Mensagem:</label>
-          <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
-
-          <button type="submit" class="button" id="btn-enviar">Enviar</button>
-        </form>
-      </div>
+<body>
+  <nav>
+    <div class="nav-left">
+      <a href="https://github.com/jm1fenix" target="_blank">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="https://br.linkedin.com/in/francisco-gasperini" target="_blank">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="#" id="contate-me-btn">
+        <i class="fas fa-envelope"></i> Contate-me
+      </a>
     </div>
+    <div class="nav-right">
+      <a href="Tescolar.html" target="_blank">
+        <i class="fas fa-graduation-cap"></i> Portfólio Escolar
+      </a>
+    </div>
+  </nav>
 
-    <script>
-      const modal = document.getElementById("modal-contato");
-      const btn = document.getElementById("contate-me-btn");
-      const span = document.getElementById("fechar-modal");
+  <section class="sobremim" id="sobremim">
+    <div class="sobre-p">
+      <h2>Olá! Eu sou o Francisco 👋</h2>
+      <p>
+        Sou Técnico em Análise de Desenvolvimento de Sistemas pelo SESI SENAI
+        - Florianópolis e estou cursando Gestão da Tecnologia da Informação no
+        IFSC. <br><br>Tenho grande interesse por tecnologia, leitura, escrita e
+        música. Estou me dedicando a desenvolver uma base sólida para atuar de
+        maneira completa em gestão e análise de dados.
+      </p>
+    </div>
+    <div>
+      <img class="francis" src="./public/francis1.png" alt="Foto de Francisco" />
+    </div>
+  </section>
 
-      btn.addEventListener("click", function (event) {
-        event.preventDefault();
-        modal.classList.add("show");
-      });
+  <section class="curriculo" style="text-align: center;">
+    <h2>📄 Baixe meu currículo</h2>
+    <a href="./public/curriculo_francisco.pdf" download class="button">Download</a>
+  </section>
 
-      span.addEventListener("click", function () {
+  <div class="modal" id="modal-contato">
+    <div class="modal-content">
+      <span class="close" id="fechar-modal">&times;</span>
+      <h2>Entre em Contato</h2>
+      <form id="form-contato" action="https://formspree.io/f/mldjvbqo" method="POST">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+        <button type="submit" class="button" id="btn-enviar">Enviar</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById("modal-contato");
+    const btn = document.getElementById("contate-me-btn");
+    const span = document.getElementById("fechar-modal");
+
+    btn.addEventListener("click", function (event) {
+      event.preventDefault();
+      modal.classList.add("show");
+    });
+
+    span.addEventListener("click", function () {
+      modal.classList.remove("show");
+    });
+
+    window.addEventListener("click", function (event) {
+      if (event.target === modal) {
         modal.classList.remove("show");
-      });
+      }
+    });
+  </script>
+</body>
 
-      window.addEventListener("click", function (event) {
-        if (event.target === modal) {
-          modal.classList.remove("show");
-        }
-      });
-    </script>
-  </body>
 </html>
